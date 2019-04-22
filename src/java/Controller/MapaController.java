@@ -18,10 +18,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import Beans.Mapa;
+import Mapeos.MapaDAO;
 
 @Controller
 public class MapaController {
-    List<Mapa> list=new ArrayList<Mapa>();
+    MapaDAO mapaDAO = new MapaDAO();
     List<String> nombres=new ArrayList<String>();
     int id=1;
     
@@ -31,26 +32,23 @@ public class MapaController {
     }
     
     @RequestMapping(value="/save",method = RequestMethod.POST)
-    public ModelAndView save(@ModelAttribute("mapa") Mapa mapa){
-        if(list.isEmpty()){      
-            list.add(new Mapa(mapa.getId(), mapa.getImg(),mapa.getName(),mapa.getTipo(), mapa.getZona()));
+    public ModelAndView save(@ModelAttribute("mapa") Mapa mapa){ 
+        if(!nombres.contains(mapa.getName())){
+            Mapa to_save = new Mapa(id, mapa.getImg(),mapa.getName(),mapa.getTipo(), mapa.getZona());
+            mapaDAO.guardaMapa(to_save);
             nombres.add(mapa.getName());
             id++;
-        } else {    
-            if(!nombres.contains(mapa.getName())){
-                list.add(new Mapa(mapa.getId(), mapa.getImg(),mapa.getName(),mapa.getTipo(), mapa.getZona()));
-                nombres.add(mapa.getName());
-                id++;         
-            }else {
-                String message ="¡Ese Mapa ya esta en la base!";
-                return new ModelAndView("error","message", message);
-            }
+        }else {
+            String message ="¡Ese Mapa ya esta en la base!";
+            return new ModelAndView("error","message", message);
         }
-        return new ModelAndView("vermapas","list",list);      
+        ArrayList<Mapa> listaMapas = (ArrayList)mapaDAO.obtenListaMapas();
+        return new ModelAndView("vermapas","list",listaMapas);      
     }
     
     @RequestMapping("/vermapas")
     public ModelAndView viewemp(){
-	return new ModelAndView("vermapas","list",list);
+	ArrayList<Mapa> listaMapas = (ArrayList)mapaDAO.obtenListaMapas();
+        return new ModelAndView("vermapas","list",listaMapas);
     }
 }

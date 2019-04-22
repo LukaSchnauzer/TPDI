@@ -34,9 +34,9 @@
                     Mapas de la Comunidad:
 		</section>
                 <c:forEach var="mapa" items="${list}"> 
-                    <div id="america" class="mapaDonado">
+                    <div id="${mapa.zona}" class="mapaDonado">
                         <img src="${mapa.img}"/>
-                        <h2 class="region"> PRUEBA</h2>
+                        <h2 class="region">${mapa.zona}</h2>
 			<ul>
                             <li>Nombre:${mapa.name}</li>
                             <li>Tipo: ${mapa.tipo}</li>
@@ -45,7 +45,7 @@
                 </c:forEach>
                 <br>
                 <a href="form">Seguir Registrando</a>
-                <a href="/Practica4/index.jsp">Volver al Inicio</a>
+                <a href="/Practica5/index.jsp">Volver al Inicio</a>
             </main>
 			
             <footer class="footer">

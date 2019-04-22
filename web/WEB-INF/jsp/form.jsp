@@ -47,7 +47,13 @@
                 <p>Nombre : <form:input path="name" /></p>
                 <p>Imagen(URL) : <form:input path="img" /></p>
                 <p>Tipo : <form:input path="tipo" /></p>
-                <p>Zona : <form:input path="zona" /></p>
+                <p>Zona : <form:select path="zona">
+                            <form:option value="america">America</form:option>
+                            <form:option value="europa">Europa</form:option>
+                            <form:option value="africa">Africa</form:option>
+                            <form:option value="asia">Asia</form:option>
+                            <form:option value="mundo">Mundial</form:option>
+                          </form:select></p>
                 <p><input type="submit" value="Registrar" /></p>
             </form:form>
         </div>         

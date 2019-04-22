@@ -9,7 +9,9 @@ package Beans;
  *
  * @author luka
  */
-public class Mapa {
+import java.io.Serializable;
+
+public class Mapa implements Serializable{
     private int id;
     private String img;
     private String name;
@@ -25,57 +27,47 @@ public class Mapa {
         this.img = img;
         this.name = name;
         this.tipo = tipo;
-    }
-
-    public int getId() {
-        return id;
+        this.zona = zona;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-    
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setZona(String zona) {
+        this.zona = zona;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public String getImg() {
         return img;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public String getName() {
+        return name;
     }
 
-    /**
-     * @return the tipo
-     */
     public String getTipo() {
         return tipo;
     }
 
-    /**
-     * @param tipo the tipo to set
-     */
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-    
-    /**
-     * @return the zona
-     */
     public String getZona() {
         return zona;
     }
-
-    /**
-     * @param zona the zona to set
-     */
-    public void setZona(String zona) {
-        this.zona = zona;
-    }
+    
 }

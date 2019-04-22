@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Beans.Mapa" table="Mapa">
+        <id name="id" column="id">
+            <generator class="identity" />
+        </id>
+        <property name="img" type="string" column="img_url" />
+        <property name="name" type="string" column="nombre" />
+        <property name="tipo" type="string" column="tipo" />
+        <property name="zona" type="string" column="zone" />
+    </class>
+</hibernate-mapping>

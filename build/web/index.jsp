@@ -124,7 +124,13 @@ Juan Carlos Montero Santiago
 
 			</main>
 			
-                    <button id="registro"> <a href="form">Dona tu mapa</a> </button>
+                    <form action="form">
+                        <button type="submit">Dona tu Mapa</button>
+                    </form>
+                    <br>
+                    <form action="vermapas">
+                        <button type="submit">Ver Mapas de la comunidad</button>
+                    </form>
 			<div id="barquito">
 				<img src="css/img/ship.gif"/>
 			</div>
