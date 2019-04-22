@@ -12,22 +12,22 @@ function cambiaFoto(region) {
 			check = condAmerica%4
 			switch(check){
 				case 0:
-					document.getElementById('americaImg').src='css/img/america2.jpg'
+					document.getElementById('americaImg').src='resources/css/img/america2.jpg'
 					condAmerica++;
 				break;
 
 				case 1:
-					document.getElementById('americaImg').src='css/img/america3.jpg'
+					document.getElementById('americaImg').src='resources/css/img/america3.jpg'
 					condAmerica++;
 				break;
 
 				case 2:
-					document.getElementById('americaImg').src='css/img/america4.png'
+					document.getElementById('americaImg').src='resources/css/img/america4.png'
 					condAmerica++;
 				break;
 
 				case 3:
-					document.getElementById('americaImg').src='css/img/america.jpg'
+					document.getElementById('americaImg').src='resources/css/img/america.jpg'
 					condAmerica=0;
 				break;
 			}
@@ -38,22 +38,22 @@ function cambiaFoto(region) {
 	    	check = condEuropa%4
 			switch(check){
 				case 0:
-					document.getElementById('europaImg').src='css/img/europa2.png'
+					document.getElementById('europaImg').src='resources/css/img/europa2.png'
 					condEuropa++;
 				break;
 
 				case 1:
-					document.getElementById('europaImg').src='css/img/europa3.jpg'
+					document.getElementById('europaImg').src='resources/css/img/europa3.jpg'
 					condEuropa++;
 				break;
 
 				case 2:
-					document.getElementById('europaImg').src='css/img/europa4.jpg'
+					document.getElementById('europaImg').src='resources/css/img/europa4.jpg'
 					condEuropa++;
 				break;
 
 				case 3:
-					document.getElementById('europaImg').src='css/img/europa.jpg'
+					document.getElementById('europaImg').src='resources/css/img/europa.jpg'
 					condEuropa=0;
 				break;
 			}
@@ -63,22 +63,22 @@ function cambiaFoto(region) {
 	    	check = condAsia%4
 			switch(check){
 				case 0:
-					document.getElementById('asiaImg').src='css/img/asia2.jpg'
+					document.getElementById('asiaImg').src='resources/css/img/asia2.jpg'
 					condAsia++;
 				break;
 
 				case 1:
-					document.getElementById('asiaImg').src='css/img/asia3.jpg'
+					document.getElementById('asiaImg').src='resources/css/img/asia3.jpg'
 					condAsia++;
 				break;
 
 				case 2:
-					document.getElementById('asiaImg').src='css/img/asia4.png'
+					document.getElementById('asiaImg').src='resources/css/img/asia4.png'
 					condAsia++;
 				break;
 
 				case 3:
-					document.getElementById('asiaImg').src='css/img/asia.jpg'
+					document.getElementById('asiaImg').src='resources/css/img/asia.jpg'
 					condAsia=0;
 				break;
 			}
@@ -88,22 +88,22 @@ function cambiaFoto(region) {
 	   		check = condAfrica%4
 			switch(check){
 				case 0:
-					document.getElementById('africaImg').src='css/img/africa2.jpg'
+					document.getElementById('africaImg').src='resources/css/img/africa2.jpg'
 					condAfrica++;
 				break;
 
 				case 1:
-					document.getElementById('africaImg').src='css/img/africa3.png'
+					document.getElementById('africaImg').src='resources/css/img/africa3.png'
 					condAfrica++;
 				break;
 
 				case 2:
-					document.getElementById('africaImg').src='css/img/africa4.png'
+					document.getElementById('africaImg').src='resources/css/img/africa4.png'
 					condAfrica++;
 				break;
 
 				case 3:
-					document.getElementById('africaImg').src='css/img/africa.jpg'
+					document.getElementById('africaImg').src='resources/css/img/africa.jpg'
 					condAfrica=0;
 				break;
 			}
@@ -113,22 +113,22 @@ function cambiaFoto(region) {
 	    	check = condMundo%4
 			switch(check){
 				case 0:
-					document.getElementById('mundoImg').src='css/img/mundo2.jpg'
+					document.getElementById('mundoImg').src='resources/css/img/mundo2.jpg'
 					condMundo++;
 				break;
 
 				case 1:
-					document.getElementById('mundoImg').src='css/img/mundo3.jpg'
+					document.getElementById('mundoImg').src='resources/css/img/mundo3.jpg'
 					condMundo++;
 				break;
 
 				case 2:
-					document.getElementById('mundoImg').src='css/img/mundo4.jpg'
+					document.getElementById('mundoImg').src='resources/css/img/mundo4.jpg'
 					condMundo++;
 				break;
 
 				case 3:
-					document.getElementById('mundoImg').src='css/img/mundo.jpg'
+					document.getElementById('mundoImg').src='resources/css/img/mundo.jpg'
 					condMundo=0;
 				break;
 			}
